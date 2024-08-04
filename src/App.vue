@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Root component</h1>
+    <div class="content">
+      <parent-comp />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ParentComp from "./components/Parent-Comp.vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components: { ParentComp },
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+:root {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0;
+  color: white;
+  font-family: sans-serif;
+  background: #222;
+  border: 1px solid blue;
+
+  h1 {
+    text-align: center;
+  }
 }
 </style>
